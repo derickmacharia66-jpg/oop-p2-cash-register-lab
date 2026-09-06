@@ -32,7 +32,7 @@ class CashRegister:
 
     def void_last_transaction(self):
         if not self.previous_transactions:
-            print("There is no discount to apply.")
+            print("There is no transaction to void.")
             return
 
         last_tx = self.previous_transactions.pop()
