@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 class CashRegister:
     def __init__(self, discount=0):
         self._discount = 0
@@ -29,9 +30,8 @@ class CashRegister:
         })
 
     def apply_discount(self):
-        if not self.previous_transactions:
+        if self.discount == 0:
             print("There is no discount to apply.")
-            self.void_last_transaction()
             return
 
         self.total -= self.total * (self._discount / 100)
